@@ -7,11 +7,27 @@ describe("joinNames", () => {
     ).toBe("Bart, Lisa & Maggie");
     expect(
       joinNames([
-        { name: "Cartman" },
-        { name: "Stan" },
-        { name: "Kyle" },
-        { name: "Kenny" },
+        {
+          name: "Cartman",
+          age: "9",
+          hat: "blue",
+        },
+        {
+          name: "Stan",
+          age: "10",
+          hat: "blue",
+        },
+        {
+          name: "Randy",
+          age: "40",
+          hat: "N/A",
+        },
+        {
+          name: "Kyle",
+          age: "9",
+          hat: "green",
+        },
       ])
-    ).toBe("Cartman, Stan, Kyle & Kenny");
+    ).toBe("Cartman, Stan, Randy & Kyle");
   });
 });
